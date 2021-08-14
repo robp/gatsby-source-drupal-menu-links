@@ -45,14 +45,14 @@ exports.sourceNodes = async (
         languages.map(async (langcode) => {
           const langPrefix = langcode !== "und" ? `/${langcode}` : ""
           const result = await fetch(
-            `${baseUrl}/${langPrefix}${apiBase}/menu_items/${menu}`,
+            `${baseUrl}${langPrefix}/${apiBase}/menu_items/${menu}`,
             {
               headers,
             }
           ).then(function (response) {
             if (response.status >= 400) {
               reporter.error(
-                `Bad response from ${baseUrl}/${apiBase}/menu_items/${menu}`
+                `Bad response from ${baseUrl}${langPrefix}/${apiBase}/menu_items/${menu}`
               )
             }
             return response.json()
