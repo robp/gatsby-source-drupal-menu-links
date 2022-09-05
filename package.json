@@ -23,7 +23,10 @@
     "gatsby-source-plugin"
   ],
   "peerDependencies": {
-    "gatsby": "^3.0.0"
+    "gatsby": "^3.0.0 || ^4.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
@@ -48,7 +51,7 @@
   },
   "homepage": "https://github.com/larowlan/gatsby-source-drupal-menu-links#readme",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=14.15.0"
   },
   "config": {
     "commitizen": {
